@@ -1,0 +1,11 @@
+services:
+  notification-app:
+    image: notification-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_RABBITMQ_HOST=rabbit-mq
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=guest
+      - SPRING_RABBITMQ_PASSWORD=guest
